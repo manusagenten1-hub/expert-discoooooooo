@@ -5,10 +5,6 @@ import CTAButton from './Button';
 export default function Hero() {
   return (
     <section className="relative pt-8 pb-20 md:pt-16 md:pb-32 overflow-hidden px-4 text-center">
-      {/* Title Banner */}
-      <div className="inline-block bg-brand-orange text-white py-1 px-4 mb-8 text-sm font-bold tracking-widest uppercase rounded-full">
-        300 RECEITAS SEM GLÚTEN
-      </div>
 
       <div className="max-w-3xl mx-auto">
         <motion.div 
@@ -32,6 +28,8 @@ export default function Hero() {
               src="https://i.ibb.co/CpDKpSKW/Chat-GPT-Image-6-de-set-de-2026-19-53-39.webp" 
               alt="Mockup 300 Receitas Sem Glúten" 
               className="w-full max-w-sm h-auto object-contain drop-shadow-2xl"
+              loading="eager"
+              fetchPriority="high"
             />
           </div>
 
