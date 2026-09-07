@@ -58,15 +58,15 @@ export default function Faq() {
               transition={{ delay: 0.05 * idx }}
               className="border border-brand-dark/10 rounded-2xl overflow-hidden bg-brand-cream/30"
             >
-              <button 
+              <div 
                 onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
+                className="w-full flex items-center justify-between p-6 text-left focus:outline-none cursor-pointer"
               >
                 <span className="font-bold text-lg text-brand-dark pr-4">{faq.q}</span>
                 <span className="text-brand-orange shrink-0">
                   {openIdx === idx ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
                 </span>
-              </button>
+              </div>
               <AnimatePresence>
                 {openIdx === idx && (
                   <motion.div
