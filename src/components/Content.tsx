@@ -104,8 +104,8 @@ export default function Content() {
           </div>
           
           <div className="relative max-w-md mx-auto h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-xl bg-brand-cream/30 border border-brand-dark/5 flex items-center justify-center">
-            <button onClick={handlePrev} className="absolute left-2 z-20 p-2 bg-white/80 rounded-full hover:bg-white"><ChevronLeft/></button>
-            <button onClick={handleNext} className="absolute right-2 z-20 p-2 bg-white/80 rounded-full hover:bg-white"><ChevronRight/></button>
+            <div onClick={() => handlePrev()} className="absolute left-2 z-20 p-2 bg-white/80 rounded-full hover:bg-white cursor-pointer"><ChevronLeft/></div>
+            <div onClick={() => handleNext()} className="absolute right-2 z-20 p-2 bg-white/80 rounded-full hover:bg-white cursor-pointer"><ChevronRight/></div>
             
             <AnimatePresence mode="wait">
               <motion.img
@@ -123,11 +123,11 @@ export default function Content() {
             {/* Indicators */}
             <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
               {testimonials.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentIndex(idx)}
-                  className={`w-2.5 h-2.5 rounded-full transition-colors ${idx === currentIndex ? 'bg-brand-orange' : 'bg-brand-dark/20 hover:bg-brand-dark/40'}`}
-                />
+              <div
+                key={idx}
+                onClick={() => setCurrentIndex(idx)}
+                className={`w-2.5 h-2.5 rounded-full transition-colors cursor-pointer ${idx === currentIndex ? 'bg-brand-orange' : 'bg-brand-dark/20 hover:bg-brand-dark/40'}`}
+              />
               ))}
             </div>
           </div>
