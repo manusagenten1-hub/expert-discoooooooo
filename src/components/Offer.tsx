@@ -72,7 +72,7 @@ export default function Offer() {
             </div>
             <p className="text-brand-dark/60 font-medium">Pagamento único</p>
             <div className="mt-4 bg-red-600 text-white font-bold py-2 px-4 rounded-full text-sm inline-block">
-              ⚠️ OFERTA ACABA DIA 09/09!
+              ⚠️ A oferta é valida até o dia 16/09!
             </div>
           </div>
 
